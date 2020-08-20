@@ -21,7 +21,7 @@ spotify_songs_predict <-
   spotify_songs_predict %>% 
   mutate_if(is.character, as.factor)
 
-spotify_songs_predict <- spotify_songs_predict[sample(nrow(spotify_songs_predict), 100), ]
+spotify_songs_predict <- spotify_songs_predict[sample(nrow(spotify_songs_predict), 5000), ]
 
 set.seed(2020)
 trainIndex <- createDataPartition(spotify_songs_predict$track_popularity,
@@ -31,7 +31,7 @@ trainIndex <- createDataPartition(spotify_songs_predict$track_popularity,
 
 spotify_songs_predict <- 
   spotify_songs_predict %>% 
-  mutate(temp_id = 1:100)
+  mutate(temp_id = 1:5000)
 
 df_train <- 
   spotify_songs_predict %>% 
