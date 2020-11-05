@@ -14,7 +14,7 @@ ikea$volume = (ikea$depth * ikea$height * ikea$width)/1000000
 ikea$USD = ikea$price * 0.26635
 
 #List of categories without much data to make facet focus on most important cats
-smallest_cats = c("Bar furniture", "Café furniture", "Room dividers", "Sideboards, buffets & console tables", "Trolleys")
+smallest_cats = c("Bar furniture", "CafÃ© furniture", "Room dividers", "Sideboards, buffets & console tables", "Trolleys")
 
 #Split df for graphing
 ikea_main = ikea %>% filter(!(category %in% smallest_cats))
